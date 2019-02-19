@@ -8,9 +8,10 @@ var {User} = require('./models/user');
 
 var app = express();
 
-//Middleware
+// Middleware
 app.use(bodyParser.json());
 
+// Routes
 app.post('/todos', (req, res) => {
     var todo = new Todo({
         text: req.body.text
